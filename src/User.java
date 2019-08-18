@@ -12,7 +12,6 @@ public class User implements Serializable {
     private ArrayList<String> phons = new ArrayList<>();
     private static Map<Integer,User> users = new HashMap<Integer, User>();
 
-
     public User() {
     }
 
@@ -173,7 +172,7 @@ public class User implements Serializable {
 
     public static void printUserList(){
         for (Map.Entry<Integer, User> item: users.entrySet()){
-            System.out.printf("Id: %d\nName: %s\nSurename: %s\n", item.getKey(), item.getValue().getName(), item.getValue().getSurename());
+            System.out.printf("Id: %d\nИмя: %s\nФамилия: %s\n", item.getKey(), item.getValue().getName(), item.getValue().getSurename());
             System.out.println();
         }
     }
@@ -192,7 +191,7 @@ public class User implements Serializable {
                 } else i=0;
             }
 
-            System.out.printf("Name: %s\nSurename: %s\nEmail: %s\n", users.get(id).getName(),
+            System.out.printf("Имя: %s\nФамилия: %s\nEmail: %s\n", users.get(id).getName(),
                     users.get(id).getSurename(), users.get(id).getEmail());
             System.out.println("Список ролей: ");
             for (String s: users.get(id).getRols()) {
